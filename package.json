@@ -1,6 +1,6 @@
 {
-  "name": "io.delaf.poultry",
-  "displayName": "poultry.io",
+  "name": "io.delaf.fambook",
+  "displayName": "Fambook.io",
   "version": "1.0.0",
   "description": "A simple Mobile Application for poultry farmers to remotely post poultry daily tranzaction.",
   "main": "index.js",

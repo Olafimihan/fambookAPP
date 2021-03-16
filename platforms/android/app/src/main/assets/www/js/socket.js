@@ -1,5 +1,5 @@
 
-var client_socket = io.connect("http://139.162.192.74:2000");
+var client_socket = io.connect("http://139.162.192.74:2021");
 
 //var socket = io.connect("http://treschicpro.online:2035");
 

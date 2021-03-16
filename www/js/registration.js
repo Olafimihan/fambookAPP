@@ -5,6 +5,7 @@ window.onload= function(){
 var registerDevice =  () => {
     $('.progress').show('slow');
     
+    var token = document.getElementById('token').value;
     var uname = document.getElementById('Username').value;
     var email = document.getElementById('email').value;  
     var pass  = document.getElementById('password').value;    
@@ -12,6 +13,7 @@ var registerDevice =  () => {
     var pass2 = pass; //document.getElementById('passkey').value;   
  
     var dataobj = {
+        token: token,
         uname: uname,
         email: email,
         pass: pass,
@@ -23,12 +25,12 @@ var registerDevice =  () => {
     console.log(dataobj)
     
     $.ajax({
-        url: "http://139.162.192.74:2000/register",
+        url: "http://139.162.192.74:2021/register",
         cache: false,
         data: {insertObject: JSON.stringify(dataobj)},
         type: "post",
         success:   function(data){
-            // console.log(data)
+            console.log(data)
             if(data.resp =='success'){
                 var arraydata = data.msg;
                 localStorage.setItem('status', 'registered');

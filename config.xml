@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.delaf.poultry" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="io.delaf.fambook" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Fambook.io</name>
     <description>
-        A Mobile APP with offline capabilities for poultry data collections into a cloud-based dashboard server for reporting purposes.
+        A Mobile APP with offline capabilities for poultry data collections into a cloud-based dashboard server for management, montoring and reporting purposes.
     </description>
     <author email="delafsolutions@gmail.com" href="http://cordova.io">
         delaf systems

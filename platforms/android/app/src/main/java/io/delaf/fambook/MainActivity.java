@@ -17,7 +17,7 @@
        under the License.
  */
 
-package io.delaf.poultry;
+package io.delaf.fambook;
 
 import android.os.Bundle;
 import org.apache.cordova.*;
