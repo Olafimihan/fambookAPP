@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "poultry.io",
+  "short_name": "poultry.io",
+  "version": "io.delaf.poultry",
+  "description": "A Mobile APP for poultry data collections into a cloud server for reporting purpose with offline capabilities",
+  "author": "delaf systems",
+  "icons": [],
+  "start_url": "index.html"
+}

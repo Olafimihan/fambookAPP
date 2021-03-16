@@ -1,0 +1,43 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "io.delaf.poultry"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "io.delaf.poultry"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "io.delaf.poultry"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "io.delaf.poultry"
+    },
+    "cordova-plugin-vibration": {
+      "PACKAGE_NAME": "io.delaf.poultry"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "io.delaf.poultry"
+    },
+    "cordova-sqlite-storage": {
+      "PACKAGE_NAME": "io.delaf.poultry"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "io.delaf.poultry"
+    },
+    "org.apache.cordova.signal-strength": {
+      "PACKAGE_NAME": "io.delaf.poultry"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "io.delaf.poultry"
+    }
+  }
+}

@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>poultry.io.</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+		<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" type="text/css" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/ionicons.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <!--fullcalendar-->
+    <link href="assets/css/fullcalendar.css" rel='stylesheet' />
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet">
+
+    <!-- <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/dbUtilities.js"></script> -->
+
+    <style>
+        .row{
+            background-color: lightslategrey;
+        }
+    </style>
+</head>
+
+<body>
+  <div id="loader_wrpper">
+		<div class="loader_style"></div>
+	</div>
+	<div class="wrapper">
+        <!-- header -->
+        <header class="main-header">
+			<div class="container_header">
+				<div class="logo d-flex align-items-center">
+					<a href="#"> <strong class="logo_icon"> <img src="assets/images/small-logo.png" alt=""> </strong> <span class="logo-default">
+							<!-- <img src="assets/images/logo2.png0" height="200" width="200" alt="FarmBook v1.0"> </span> </a> -->
+							<h2 style="background-color: transparent; width: auto;">poultry.io</h2></span> </a>
+					<div class="icon_menu full_menu">
+						<a href="#!" class="menu-toggler sidebar-toggler"></a>
+					</div>
+				</div>
+
+			</div>
+
+		</header>
+		<!-- header_End -->
+        <!-- Content_right -->
+        <div class="container_full">
+
+			<div class="side_bar dark_blue side_bg_img scroll_auto">
+				<div class="user-panel">
+                    <div class="user_image">
+                        <img src="assets/images/about-1.jpg" class="img-circle mCS_img_loaded" alt="User Image">
+                    </div>
+                    <div class="info">
+                        <p>
+                            Farm Manager
+                        </p>
+                        <a href="#"> <i class="fa fa-circle text-success"></i> Online</a>
+                    </div>
+				</div>
+                
+                <ul id="dc_accordion" class="sidebar-menu tree" >
+					
+					<li class="menu_sub">
+						<a href="purchaseDOC.html" onclick="manageClicked('doc')"> <i class="fa fa-cubes"></i> Purchase DOC</a>
+						<!-- <a href="form-checkbox-radio.html" onclick="manageClicked('feedusage')"> <i class="fa fa-pie-chart"></i> <span>Feed Usage</span> </a> -->
+						
+					</li>
+
+					<li class="menu_sub">
+						<a href="purchaseDOC.html"  onclick="manageClicked('feed')"> <i class="fa fa-cubes"></i> <span>Purchase Feeds</span>  </a>
+						<!-- <a href="#"> <i class="fa fa-laptop" onclick="manageClicked('production')"></i> <span>Production</span> </a> -->
+					</li>
+					<li class="menu_sub">
+						<a href="purchaseDOC.html" onclick="manageClicked('drug')"> <i class="fa fa-cubes"></i> <span>Purchase Drugs/Items </span></a>
+						<!-- <a href="#"> <i class="fa fa-ambulance" onclick="manageClicked('mortality')"></i> <span>Mortality </span> </a> -->
+						
+					</li>
+
+					
+					<li class="menu_sub">
+						<a href="menu.html"> <i class="fa fa-dashboard" ></i> <span>Dashboard</span></a>
+						
+                    </li>
+                    
+                    <li class="menu_sub">
+						<a href="#" onclick="synchDevice()"> <i class="fa fa-dashboard" ></i> <span>Synch Server Now</span></a>
+						
+					</li>
+
+
+
+
+				</ul>
+
+			</div>
+
+            <!--main contents start-->
+            <main class="content_wrapper">
+                <!--page title start-->
+                <!-- <div class="page-heading">
+                    <div class="container-fluid">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-12">
+                                <div class="page-breadcrumb">
+                                    <h1>Basic Input</h1>
+                                </div>
+                            </div>
+                            <div class="col-12  d-md-flex">
+                                <div class="breadcrumb_nav">
+                                    <ol class="breadcrumb">
+                                        <li class="active" style="background-color: antiquewhite; text-align: center;">
+                                            Purchase DOC
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div> -->
+                <!--page title end-->
+
+
+                <div class="container-fluid" id="purchaseDOC">
+                    <!-- state start-->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card card-shadow mb-4">
+                                <div class="card-header">
+                                    <div class="card-title" style="text-align: center; font-weight: bolder;">
+                                        Purchase DOC
+                                    </div>
+                                </div>
+                                <div class="card-body" style="background-color: whitesmoke;">
+                                    <form action="menu.html">
+                                        
+                                        <div class="form-group">
+                                            <!-- <label for="supplier">Select Supplier</label> -->
+                                            <select class="form-control" id="doc_supplier">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <!-- <label for="pen">Select Pen</label> -->
+                                            <select class="form-control" id="doc_pen" onchange="getBirthDate(this.value)">
+                                                <option>pen 1</option>
+                                                <option>pen 2</option>
+                                                <option>pen 3</option>
+                                                <option>pen 4</option>
+                                                <option>pen 5</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <!-- <label for="dob">Birt Date</label> -->
+                                            <input type="date" class="form-control" id="doc_dob" placeholder="DOC date...">
+                                            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                        </div>
+                                        <div class="form-group">
+                                            <!-- <label for="invoice">Invoice #</label> -->
+                                            <input type="text" class="form-control" id="doc_invoice" placeholder="Transaction invoice #...">
+                                            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <!-- <label for="exampleInputEmail1">Unit Cost</label> -->
+                                            <input type="number" class="form-control" id="doc_cost" onblur="calculateDOCAmount()" placeholder=" Unit Cost">
+                                            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <!-- <label for="qty">Quantity</label> -->
+                                            <input type="number" class="form-control" id="doc_qty" onblur="calculateDOCAmount()" placeholder=" quantity purchased">
+                                            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                        </div>
+                                        <div class="form-group">
+                                            <!-- <label for="exampleInputEmail1">Amount</label> -->
+                                            <input type="text" class="form-control" id="doc_amt" readonly>
+                                            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                        </div>
+
+                                        <button type="button" id="DOC_saver" class="btn btn-primary" >Submit</button>
+                                        <button type="submit" id="pdoc_close" class="btn btn-success" >Close</button>
+                                    </form>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                         
+                    </div>
+                    <!-- state end-->
+                </div><!-- doc end-->
+
+                <div class="container-fluid" id="purchaseFeed">
+                    <!-- state start-->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card card-shadow mb-4">
+                                <div class="card-header">
+                                    <div class="card-title" style="text-align: center; font-weight: bolder;">
+                                        Purchase Feeds
+                                    </div>
+                                </div>
+                                <div class="card-body" style="background-color: whitesmoke;">
+                                    <form action="menu.html">
+                                        
+                                        <div class="form-group">
+                                            <!-- <label for="supplier">Select Supplier</label> -->
+                                            <select class="form-control" id="feed_supplier">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <!-- <label for="feed">Select Feed</label> -->
+                                            <select class="form-control" id="feed_feeds">
+                                                <option>pen 1</option>
+                                                <option>pen 2</option>
+                                                <option>pen 3</option>
+                                                <option>pen 4</option>
+                                                <option>pen 5</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <!-- <label for="dob"> Date</label> -->
+                                            <input type="date" class="form-control" id="feed_dated" placeholder="Purchase date...">
+                                            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                        </div>
+                                        <div class="form-group">
+                                            <!-- <label for="invoice">Invoice #</label> -->
+                                            <input type="text" class="form-control" id="feed_invoice" placeholder="Transaction invoice #...">
+                                            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <!-- <label for="exampleInputEmail1">Unit Cost</label> -->
+                                            <input type="number" class="form-control" id="feed_cost" onblur="calculateFeedAmount()" placeholder=" Unit Cost">
+                                            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <!-- <label for="qty">Quantity</label> -->
+                                            <input type="number" class="form-control" id="feed_qty" onblur="calculateFeedAmount()" placeholder=" quantity purchased">
+                                            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                        </div>
+                                        <div class="form-group">
+                                            <!-- <label for="exampleInputEmail1">Amount</label> -->
+                                            <input type="text" class="form-control" id="feed_amt" readonly>
+                                            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                        </div>
+
+                                        <button type="button" id="feed_save" class="btn btn-primary" >Submit</button>
+                                        <button type="submit" id="pfeed_close" class="btn btn-success" >Close</button>
+                                    </form>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                         
+                    </div>
+                    <!-- state end-->
+                </div> <!-- purchase feed end-->
+
+                <div class="container-fluid" id="purchaseDrugs">
+                    <!-- state start-->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card card-shadow mb-4">
+                                <div class="card-header">
+                                    <div class="card-title" style="text-align: center; font-weight: bolder;">
+                                        Purchase Drugs
+                                    </div>
+                                </div>
+                                <div class="card-body" style="background-color: whitesmoke;">
+                                    <form action="menu.html">
+                                        
+                                        <div class="form-group">
+                                            <!-- <label for="supplier">Select Supplier</label> -->
+                                            <select class="form-control" id="drug_supplier">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <!-- <label for="feed">Select Drugs</label> -->
+                                            <select class="form-control" id="drug_drugs">
+                                                <option>pen 1</option>
+                                                <option>pen 2</option>
+                                                <option>pen 3</option>
+                                                <option>pen 4</option>
+                                                <option>pen 5</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <!-- <label for="dob"> Date</label> -->
+                                            <input type="date" class="form-control" id="drug_dated" placeholder="Purchase date...">
+                                            
+                                        </div>
+                                        <div class="form-group">
+                                            <!-- <label for="invoice">Invoice #</label> -->
+                                            <input type="text" class="form-control" id="drug_invoice" placeholder="Transaction invoice #...">
+                                            
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <!-- <label for="exampleInputEmail1">Unit Cost</label> -->
+                                            <input type="number" class="form-control" id="drug_cost" onblur="calculateDrugAmount()" placeholder=" Unit Cost">
+                                            
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <!-- <label for="qty">Quantity</label> -->
+                                            <input type="number" class="form-control" id="drug_qty" onblur="calculateDrugAmount()" placeholder=" quantity purchased">
+                                            
+                                        </div>
+                                        <div class="form-group">
+                                            <!-- <label for="exampleInputEmail1">Amount</label> -->
+                                            <input type="text" class="form-control" id="drug_amt" readonly>
+                                            
+                                        </div>
+
+                                        <button type="button" id="drug_save" class="btn btn-primary" >Submit</button>
+                                        <button type="submit" id="pdrug_close" class="btn btn-success" >Close</button>
+                                    </form>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                         
+                    </div>
+                    <!-- state end-->
+                </div> <!-- purchase feed end-->
+
+                <div class="container-fluid" id="productionEntry">
+                    <!-- state start-->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card card-shadow mb-4">
+                                <div class="card-header">
+                                    <div class="card-title" style="text-align: center; font-weight: bolder;">
+                                        Eggs Production Entry
+                                    </div>
+                                </div>
+                                <div class="card-body" style="background-color: whitesmoke;">
+                                    <form action="menu.html">
+                                        
+                                        <div class="form-group">
+                                            <!-- <label for="feed">Select Drugs</label> -->
+                                            <select class="form-control" id="prod_pen" onchange="getBirthDate(this.value)" >
+                                                <option>pen 1</option>
+                                                <option>pen 2</option>
+                                                <option>pen 3</option>
+                                                <option>pen 4</option>
+                                                <option>pen 5</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <!-- <label for="supplier">Select Supplier</label> -->
+                                            <select class="form-control" id="prod_egg">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <!-- <label for="dob"> Date</label> -->
+                                            <input type="date" class="form-control" id="prod_dated" placeholder="Production date...">
+                                            
+                                        </div>
+
+                                        <!-- <div class="form-group">
+                                            <label for="invoice">Invoice #</label>
+                                            <input type="text" class="form-control" id="drug_invoice" placeholder="Transaction invoice #...">
+                                            
+                                        </div> -->
+                                        
+                                        <div class="form-group">
+                                            <input type="number" class="form-control" id="prod_qty" placeholder=" crates produced">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <input type="number" class="form-control" id="prod_piece" min="0" max="29" placeholder=" egg pieces produced">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <input type="number" class="form-control" id="prod_srcdoc" placeholder="Enter source doc No...">
+                                        </div>
+                                        
+                                        <button type="button" id="prod_save" class="btn btn-primary" >Submit</button>
+                                        <button type="submit" id="prod_close" class="btn btn-success" >Close</button>
+                                    </form>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                         
+                    </div>
+                    <!-- state end-->
+                </div> <!-- production end-->
+
+                <div class="container-fluid" id="mortalityEntry">
+                    <!-- state start-->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card card-shadow mb-4">
+                                <div class="card-header">
+                                    <div class="card-title" style="text-align: center; font-weight: bolder;">
+                                        Mortality Entry
+                                    </div>
+                                </div>
+                                <div class="card-body" style="background-color: whitesmoke;">
+                                    <form action="menu.html">
+                                        
+                                        <div class="form-group">
+                                            <!-- <label for="feed">Select Drugs</label> -->
+                                            <select class="form-control" id="morta_pen" onchange="getBirthDate(this.value)">
+                                                <option>pen 1</option>
+                                                <option>pen 2</option>
+                                                <option>pen 3</option>
+                                                <option>pen 4</option>
+                                                <option>pen 5</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <input type="date" class="form-control" id="morta_dated" placeholder="Production date...">
+                                        </div>
+
+                                        <!-- <div class="form-group">
+                                            <label for="invoice">Invoice #</label>
+                                            <input type="text" class="form-control" id="drug_invoice" placeholder="Transaction invoice #...">                                            
+                                        </div> -->
+                                        
+                                        <div class="form-group">
+                                            <input type="number" class="form-control" id="morta_qty" placeholder=" Mortality quantity...">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <input type="number" class="form-control" id="morta_srcdoc" placeholder="Enter source doc No...">
+                                        </div>
+                                        
+                                        <button type="button" id="morta_save" class="btn btn-primary" >Submit</button>
+                                        <button type="submit" id="morta_close" class="btn btn-success" >Close</button>
+                                    </form>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                         
+                    </div>
+                    <!-- state end-->
+                </div> <!-- Mortality end-->
+
+                <div class="container-fluid" id="feedusageEntry">
+                    <!-- state start-->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card card-shadow mb-4">
+                                <div class="card-header">
+                                    <div class="card-title" style="text-align: center; font-weight: bolder;">
+                                        Feeds Served Entry
+                                    </div>
+                                </div>
+                                <div class="card-body" style="background-color: whitesmoke;">
+                                    <form action="menu.html">
+                                        
+                                        <div class="form-group">
+                                            <!-- <label for="feed">Select Drugs</label> -->
+                                            <select class="form-control" id="used_pen" onchange="getBirthDate(this.value)" >
+                                                <option>pen 1</option>
+                                                <option>pen 2</option>
+                                                <option>pen 3</option>
+                                                <option>pen 4</option>
+                                                <option>pen 5</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <!-- <label for="supplier">Select Supplier</label> -->
+                                            <select class="form-control" id="used_feed">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <!-- <label for="dob"> Date</label> -->
+                                            <input type="date" class="form-control" id="used_dated" placeholder="Served date...">
+                                            
+                                        </div>
+
+                                        <!-- <div class="form-group">
+                                            <label for="invoice">Invoice #</label>
+                                            <input type="text" class="form-control" id="drug_invoice" placeholder="Transaction invoice #...">
+                                            
+                                        </div> -->
+                                        
+                                        <div class="form-group">
+                                            <input type="number" class="form-control" id="used_bag" onblur="convertFeedBagToKg(this.value)" placeholder="Quantity (bag)">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <input type="number" class="form-control" id="used_qty" readonly placeholder="Quantity (kg)">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <input type="number" class="form-control" id="used_srcdoc" readonly placeholder="Enter source doc No...">
+                                        </div>
+                                        
+                                        <button type="button" id="feedused_save" class="btn btn-primary" >Submit</button>
+                                        <button type="submit" id="feed_close" class="btn btn-success" >Close</button>
+                                    </form>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                         
+                    </div>
+                    <!-- state end-->
+                </div> <!-- FeedUsage end-->
+
+                <div class="container-fluid" id="drugdispensaryEntry">
+                    <!-- state start-->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card card-shadow mb-4" >
+                                <div class="card-header">
+                                    <div class="card-title" style="text-align: center; font-weight: bolder;">
+                                        Drug dispensary Entry
+                                    </div>
+                                </div>
+                                <div class="card-body" style="background-color: whitesmoke;">
+                                    <form action="menu.html">
+                                        
+                                        <div class="form-group">
+                                            <!-- <label for="feed">Select Drugs</label> -->
+                                            <select class="form-control" id="dispensary_pen" onchange="getBirthDate(this.value)" >
+                                                <option>pen 1</option>
+                                                <option>pen 2</option>
+                                                <option>pen 3</option>
+                                                <option>pen 4</option>
+                                                <option>pen 5</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!-- <label for="supplier">Select Supplier</label> -->
+                                            <select class="form-control" id="dispensary_drug">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <!-- <label for="dob"> Date</label> -->
+                                            <input type="date" class="form-control" id="dispensary_dated" placeholder="dispensed date...">
+                                            
+                                        </div>
+                                         
+                                        <div class="form-group">
+                                            <input type="number" class="form-control" id="dispensary_qty" placeholder=" quantity used...">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <input type="number" class="form-control" id="dispensary_srcdoc" placeholder=" Enter source doc No...">
+                                        </div>
+                                        
+                                        <button type="button" id="drugdispensary_save" class="btn btn-primary" >Submit</button>
+                                        <button type="submit" id="drug_close" class="btn btn-success" >Close</button>
+                                    </form>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                         
+                    </div>
+                    <!-- state end-->
+                </div> <!-- FeedUsage end-->
+
+                <div class="container-fluid" id="expenseEntry">
+                    <!-- state start-->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card card-shadow mb-4" >
+                                <div class="card-header">
+                                    <div class="card-title" style="text-align: center; font-weight: bolder;">
+                                        Daily Expense Entry
+                                    </div>
+                                </div>
+                                <div class="card-body" style="background-color: whitesmoke;">
+                                    <form action="menu.html">
+                                        
+                                        <div class="form-group">
+                                            <!-- <label for="feed">Select Drugs</label> -->
+                                            <select class="form-control" id="gl_acct" onchange="getBirthDate(this.value)" >
+                                                <option>pen 1</option>
+                                                <option>pen 2</option>
+                                                <option>pen 3</option>
+                                                <option>pen 4</option>
+                                                <option>pen 5</option>
+                                            </select>
+                                        </div> 
+                                        
+                                        <div class="form-group">
+                                            <!-- <label for="dob"> Date</label> -->
+                                            <input type="date" class="form-control" id="gl_dated" placeholder="expense date...">
+                                            
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <input type="number" class="form-control" id="gl_amt" placeholder=" Amount...">
+                                        </div>
+                                        
+                                         <div class="form-group">
+                                            <input type="text" class="form-control" id="gl_narration" placeholder=" Narrative...">
+                                        </div>
+                                        
+                                         <div class="form-group">
+                                            <input type="text" class="form-control" id="gl_pcv" placeholder=" PCV #...">
+                                        </div>
+                                        
+                                        <button type="button" id="expense_save" class="btn btn-primary" >Submit</button>
+                                        <button type="submit" id="expe_close" class="btn btn-success" >Close</button>
+                                    </form>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                         
+                    </div>
+                    <!-- state end-->
+                </div> <!-- FeedUsage end-->
+
+                <div class="container-fluid" id="layersalesEntry">
+                    <!-- state start-->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card card-shadow mb-4" >
+                                <div class="card-header">
+                                    <div class="card-title" style="text-align: center; font-weight: bolder;">
+                                        Layer Sales Entry
+                                    </div>
+                                </div>
+                                <div class="card-body" style="background-color: whitesmoke;">
+                                    <form action="menu.html">
+                                        
+                                        <div class="form-group">
+                                            <!-- <label for="feed">Select Drugs</label> -->
+                                            <select class="form-control" id="layer_customer"  >
+                                                
+                                            </select>
+                                        </div> 
+                                        
+                                        <div class="form-group">
+                                            <select class="form-control" id="layer_pen" onchange="getCost(this.value)" >
+                                            
+                                            </select>
+                                            <!-- <input type="text" id="cp" > -->
+                                            
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <input type="date" class="form-control" id="layer_dated" placeholder="Invoice date">
+                                            
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="layer_invoice" value="0" placeholder="Invoice #">
+                                            
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="number" class="form-control" id="layer_qty" onkeyup="calculatelayerSalesAmount()" placeholder="Quantity">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!-- <input type="hidden" class="form-control" id="layer_invoice" value="0" placeholder="Invoice" readonly> -->
+                                            <input type="number" class="form-control" id="layer_sp" placeholder="sell price..." onkeyup="calculatelayerSalesAmount()" >
+                                        </div>                                        
+                                         <div class="form-group">
+                                            <input type="text" class="form-control" id="layer_amt" placeholder="Amount" readonly>
+                                        </div>
+
+                                        <!-- <div class="form-group">
+                                            <input class="radio" type="radio" name="layer_sales" id="layer_sales" value="0" checked>Sales
+                                            <input class="radio" type="radio" name="layer_sales" id="layer_crack" value="9">Cracks
+                                        </div> -->
+                                        
+                                        <button type="button" id="layer_save" class="btn btn-primary" >Submit</button>
+                                        <button type="button" id="layer_pull" class="btn btn-success" >Pull Data</button>
+                                        <button type="submit" id="layer_close" class="btn btn-danger" >Close</button>
+                                        <P id="layerreccount"></P>
+                                    </form>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                         
+                    </div>
+                    <!-- state end-->
+                </div> <!-- Egg Sales end-->
+
+                <div class="container-fluid" id="salesEntry">
+                    <!-- state start-->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card card-shadow mb-4" >
+                                <div class="card-header">
+                                    <div class="card-title" style="text-align: center; font-weight: bolder;">
+                                        Sales Entry
+                                    </div>
+                                </div>
+                                <div class="card-body" style="background-color: whitesmoke;">
+                                    <form action="menu.html">
+                                        
+                                        <div class="form-group">
+                                            <!-- <label for="feed">Select Drugs</label> -->
+                                            <select class="form-control" id="sales_customer" onchange="getData(this.value)" >
+                                                
+                                            </select>
+                                        </div> 
+                                        
+                                        <div class="form-group">
+                                            <!-- <label for="dob"> Date</label> -->
+                                            <input type="date" class="form-control" id="sales_dated" placeholder="Invoice date">
+                                            
+                                        </div>
+
+                                        
+                                        <div class="form-group">
+                                            <select class="form-control" id="sales_egg" onchange="getItemData(this.value)" >
+                                            
+                                            </select>
+                                            <!-- <input type="text" id="cp" > -->
+                                            
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <input type="number" class="form-control" id="sales_qty" onblur="calculateSalesAmount()" placeholder="Quantity">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="number" class="form-control" id="sales_invoice" placeholder="Invoice# issued..." >
+                                            
+                                        </div>                                        
+                                        
+                                        <div class="form-group">
+                                            <!-- <input type="text" class="form-control" id="sales_amt" placeholder="Amount" readonly> -->
+                                            <input type="number" class="form-control col-md-6" id="sp" readonly placeholder="sell price..." readonly>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="text" class="form-control col-md-6" id="sales_amt" placeholder="Amount" readonly>
+                                            <!-- <input type="number" class="form-control" id="sp" readonly placeholder="sell price..." readonly> -->
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input class="radio" type="radio" name="sales" id="sales" value="0" checked>Sales
+                                            <input class="radio" type="radio" name="sales" id="crack" value="9">Cracks
+                                        </div>
+                                        
+                                        <button type="button" id="save_save" class="btn btn-primary" >Submit</button>
+                                        <button type="button" id="save_pull" class="btn btn-default" >Pull Data</button>
+                                        <button type="submit" id="sales_close" class="btn btn-success" >Close</button>
+                                        <P id="reccount"></P>
+                                    </form>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                         
+                    </div>
+                    <!-- state end-->
+                </div> <!-- Asset Sales end-->
+
+                <div class="container-fluid" id="paymentEntry">
+                    <!-- state start-->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card card-shadow mb-4" >
+                                <div class="card-header">
+                                    <div class="card-title" style="text-align: center; font-weight: bolder;">
+                                        Payables
+                                    </div>
+                                </div>
+                                <div class="card-body" style="background-color: whitesmoke;">
+                                    <form action="menu.html">
+                                        
+                                        <div class="form-group">
+                                            <!-- <label for="feed">Select Drugs</label> -->
+                                            <select class="form-control" id="payment_supplier" onchange="getData(this.value)" >
+                                                
+                                            </select>
+                                        </div> 
+                                        
+                                        <div class="form-group">
+                                            <select class="form-control" id="pay_method" onchange="getItemData(this.value)" >
+                                            
+                                            </select> 
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <!-- <label for="dob"> Date</label> -->
+                                            <input type="date" class="form-control" id="pay_dated" placeholder="Invoice date">
+                                            
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="number" class="form-control" id="pay_amt" placeholder="Amount Paid..." >
+                                        </div>
+                                        
+                                        
+                                        <!-- <div class="form-group">
+                                            <input type="text" class="form-control" id="pay_cheque" placeholder="cheque#...">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="pay_narra" placeholder="narration...">
+                                        </div> -->
+
+                                          
+                                        <button type="button" id="pay_save" class="btn btn-primary" >Submit</button>
+                                        <button type="submit" id="pay_close" class="btn btn-success" >Close</button>
+                                        <P id="reccount"></P>
+                                    </form>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                         
+                    </div>
+                    <!-- state end-->
+                </div> <!-- FeedUsage end-->
+                <div class="container-fluid" id="receiptEntry">
+                    <!-- state start-->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card card-shadow mb-4" >
+                                <div class="card-header">
+                                    <div class="card-title" style="text-align: center; font-weight: bolder;">
+                                        Receivables
+                                    </div>
+                                </div>
+                                <div class="card-body" style="background-color: whitesmoke;">
+                                    <form action="menu.html">
+                                        
+                                        <div class="form-group">
+                                            <!-- <label for="feed">Select Drugs</label> -->
+                                            <select class="form-control" id="receipt_customer" onchange="getData(this.value)" >
+                                                
+                                            </select>
+                                        </div> 
+                                        
+                                        <div class="form-group">
+                                            <select class="form-control" id="receipt_method" onchange="getItemData(this.value)" >
+                                            
+                                            </select> 
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <!-- <label for="dob"> Date</label> -->
+                                            <input type="date" class="form-control" id="receipt_dated" placeholder="Invoice date">
+                                            
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="number" class="form-control" id="receipt_amt" placeholder="Amount Received..." >
+                                        </div>
+                                        
+<!--                                         
+                                         <div class="form-group">
+                                            <input type="text" class="form-control" id="receipt_narra" placeholder="narration...">
+                                        </div> -->
+
+                                          
+                                        <button type="button" id="receipt_save" class="btn btn-primary" >Submit</button>
+                                        <button type="submit" id="receipt_close" class="btn btn-success" >Close</button>
+                                        <P id="reccount"></P>
+                                    </form>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                         
+                    </div>
+                    <!-- state end-->
+                </div> <!-- FeedUsage end-->
+
+                <div class="container-fluid" id="syncServer">
+                    <!-- state start-->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card card-shadow mb-4" >
+                                <div class="card-header">
+                                    <div class="card-title" style="text-align: center; font-weight: bolder;">
+                                        Sync Server
+                                    </div>
+                                </div>
+                                <div class="card-body" style="background-color: whitesmoke;">
+                                    <p id="errlogger">
+                                        
+                                    </p>
+                                    <form action="menu.html">
+                                        <img class="img" src="img/file-transfer.gif" alt="">
+                                        
+                                        <p id="network">
+
+                                        </p>
+
+                                        <!-- <div class="form-group">
+                                            <input type="date" class="form-control" id="sales_dated" placeholder="Invoice date">
+                                            
+                                        </div>
+  -->
+                                        
+                                        <button type="button" id="synchserver" class="btn btn-primary" onclick="syncServer()" >Synchronie Data</button> 
+                                        <button type="submit" id="sales_close" class="btn btn-success" >Close</button>
+                                        <P id="reccount"></P>
+                                    </form>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                         
+                    </div>
+                    <!-- state end-->
+                </div> <!-- FeedUsage end-->
+
+                <div id="result_holder">
+                    
+                </div>
+
+                <!-- <div>
+                    <input type="text" id=birt_date>
+                </div> -->
+                
+            </main>
+            <!--main contents end-->
+
+        </div>
+        <!-- Content_right_End -->
+        
+        <!-- Footer -->
+        <footer class="footer ptb-20">
+			<div class="row">
+				<div class="col-12 text-center">
+					<div class="copy_right">
+						
+                        <p >
+							<b style="color: whitesmoke;">2020 © Designed By: </b>
+							<a href="#"><b style="color: white; font-weight: bolder; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">DELAF SYSTEMS COMPANY.</b></a>
+                        </p>
+                        
+					</div>
+				</div>
+			</div>
+		</footer>
+        <!-- Footer_End -->
+
+    </div>
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="assets/js/custom.js" type="text/javascript"></script>
+
+    <script src="js/jquery-1.10.1.min.js"></script>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    
+    <!-- <script src="/socket.io/socket.io.js"></script> -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+  
+  <script src="js/socket.js"></script>
+
+
+
+    <script src="js/dbUtilities.js"></script>
+    <script src="js/menujs.js"></script>
+    
+    <script>
+        // $(document).ready(async function(){
+        //     console.log('Dele')
+        //     var supplier =  await getSupplierDDL();
+        //     console.log(supplier);
+
+        // })
+
+        
+        
+    </script>
+    
+</body>
+
+</html>

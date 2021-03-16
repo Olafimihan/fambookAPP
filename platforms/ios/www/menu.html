@@ -1,0 +1,304 @@
+<!DOCTYPE html> <html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>poultry.io</title>
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
+	<!-- google font -->
+
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" type="text/css" />
+	
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/line-awesome.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/ionicons.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/jquery.mCustomScrollbar.css" rel="stylesheet">
+	<link href="assets/css/weather-icons.min.css" rel="stylesheet">
+	<!--Morris Chart -->
+	<link rel="stylesheet" href="assets/js/index/morris-chart/morris.css">
+	<!-- owl_carousel -->
+		<link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.min.css">
+
+	<link href="assets/css/style.css" rel="stylesheet">
+	<link href="assets/css/responsive.css" rel="stylesheet">
+</head>
+
+<body>
+	<div id="loader_wrpper">
+		<div class="loader_style"></div>
+	</div>
+
+	<div class="wrapper">
+		<!-- header -->
+		<header class="main-header">
+			<div class="container_header">
+				<div class="logo d-flex align-items-center">
+					<a href="#"> <strong class="logo_icon"> <img src="assets/images/small-logo.png" alt=""> </strong> <span class="logo-default">
+							<!-- <img src="assets/images/logo2.png0" height="200" width="200" alt="FarmBook v1.0"> </span> </a> -->
+							<h2 style="background-color: transparent; width: auto;">poultry.io</h2></span> </a>
+					<div class="icon_menu full_menu">
+						<a href="#!" class="menu-toggler sidebar-toggler"></a>
+					</div>
+				</div>
+
+			</div>
+
+		</header>
+		<!-- header_End -->
+		<!-- Content_right -->
+		<div class="container_full">
+
+			<div class="side_bar dark_blue side_bg_img scroll_auto">
+				<div class="user-panel">
+						<div class="user_image">
+							<img src="assets/images/about-1.jpg" class="img-circle mCS_img_loaded" alt="User Image">
+						</div>
+						<div class="info">
+							<p>
+								Farm Manager
+							</p>
+							<a href="#"> <i class="fa fa-circle text-success"></i> Online</a>
+						</div>
+				</div>
+
+				
+				 <ul id="dc_accordion" class="sidebar-menu tree" >
+					
+					<li class="menu_sub">
+						<a href="purchaseDOC.html" onclick="manageClicked('doc')"> <i class="fa fa-cubes"></i> Purchase DOC</a>
+						<!-- <a href="form-checkbox-radio.html" onclick="manageClicked('feedusage')"> <i class="fa fa-pie-chart"></i> <span>Feed Usage</span> </a> -->
+						
+					</li>
+
+					<li class="menu_sub">
+						<a href="purchaseDOC.html"  onclick="manageClicked('feed')"> <i class="fa fa-cubes"></i> <span>Purchase Feeds</span>  </a>
+						<!-- <a href="#"> <i class="fa fa-laptop" onclick="manageClicked('production')"></i> <span>Production</span> </a> -->
+					</li>
+					<li class="menu_sub">
+						<a href="purchaseDOC.html" onclick="manageClicked('drug')"> <i class="fa fa-cubes"></i> <span>Purchase Drugs/Items </span></a>
+						<!-- <a href="#"> <i class="fa fa-ambulance" onclick="manageClicked('mortality')"></i> <span>Mortality </span> </a> -->
+						
+					</li>
+
+					
+					<li class="menu_sub">
+						<a href="menu.html"> <i class="fa fa-dashboard" ></i> <span>Dashboard</span></a>
+						
+					</li>
+
+
+
+				</ul>
+
+			</div>
+
+			<div class="content_wrapper">
+
+				<!-- <div class="banner-img d-flex align-items-center">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="search_box">
+									<form class="header-subscribe-form">
+                                       <div class="header-form-subscribe">
+										   <h2>Farmbook v1.0</h2>
+										<input type="search" class="form-contorl" placeholder="Search...">
+                                            <button class="header-btn icon-magnifier"></button>
+                                       </div>
+
+                                  </form>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> -->
+
+
+				<div class="course_listhome mt-30">
+					<div class="container-fluid">
+
+					<div class="row">
+						<div class="col-12 mb-3">
+							<div class="heading_view">
+								<h1 style="background-color: skyblue; text-align: center"> Manager Dashboard</h1>
+							</div>
+						</div>
+	                    
+	                    <div class="col-12 d-flex flex-wrap plr">
+							<div class="fl-col">
+							<div class="course_box">
+								<a href="purchaseDOC.html" onclick="manageClicked('production')" >
+									<div class="icon_relative">
+										<i class="la la-cubes" aria-hidden="true"></i>
+										<span>Production</span>
+									</div>
+
+								</a>
+							</div>
+						</div>
+
+						<div class="fl-col">
+							<div class="course_box">
+								<a href="purchaseDOC.html" onclick="manageClicked('mortality')">
+									<div class="icon_relative">
+										<i class="la la-ambulance" aria-hidden="true"></i>
+										<span>Mortality</span>
+									</div>
+
+								</a>
+							</div>
+						</div>
+
+						<div class="fl-col">
+							<div class="course_box">
+								<a href="purchaseDOC.html" onclick="manageClicked('feedusage')">
+									<div class="icon_relative">
+										<i class="la la-flask" aria-hidden="true"></i>
+										<span>Feed Usage</span>
+									</div>
+
+								</a>
+							</div>
+						</div>
+
+						<div class="fl-col">
+							<div class="course_box">
+								<a href="purchaseDOC.html" onclick="manageClicked('dispensary')">
+									<div class="icon_relative">
+										<i class="la la-desktop" aria-hidden="true"></i>
+										<span>Drug Dispensary</span>
+									</div>
+
+								</a>
+							</div>
+						</div>
+
+						<div class="fl-col">
+							<div class="course_box">
+								<a href="purchaseDOC.html" onclick="manageClicked('expenses')">
+									<div class="icon_relative">
+										<i class="la la-dollar" aria-hidden="true"></i>
+										<span>Farm Expense</span>
+									</div>
+
+								</a>
+							</div>
+						</div>
+
+						<div class="fl-col">
+							<div class="course_box">
+								<a href="purchaseDOC.html" onclick="manageClicked('eggsales')">
+									<div class="icon_relative">
+										<i class="la la-dollar" aria-hidden="true"></i>
+										<span>Egg Sales</span>
+									</div>
+
+								</a>
+							</div>
+						</div>
+
+						<div class="fl-col">
+							<div class="course_box">
+								<a href="purchaseDOC.html" onclick="manageClicked('payment')">
+									<div class="icon_relative">
+										<i class="la la-dollar" aria-hidden="true"></i>
+										<span>Payment</span>
+									</div>
+
+								</a>
+							</div>
+						</div>
+
+						<div class="fl-col">
+							<div class="course_box">
+								<a href="purchaseDOC.html" onclick="manageClicked('receipt')">
+									<div class="icon_relative">
+										<i class="la la-dollar" aria-hidden="true"></i>
+										<span>Receipt</span>
+									</div>
+
+								</a>
+							</div>
+						</div>
+
+						<div class="fl-col">
+							<div class="course_box">
+								<a href="purchaseDOC.html" onclick="manageClicked('birdsales')">
+									<div class="icon_relative">
+										<i class="la la-dollar" aria-hidden="true"></i>
+										<span>Asset Sales</span>
+									</div>
+
+								</a>
+							</div>
+						</div>
+
+						<div class="fl-col">
+							<div class="course_box">
+								<a href="purchaseDOC.html" onclick="manageClicked('syncserver')">
+									<div class="icon_relative">
+										<i class="fa fa-database" aria-hidden="true"></i>
+										<span>Sync Server</span>
+									</div>
+
+								</a>
+							</div>
+						</div>
+
+						<!-- </div> -->
+
+					</div>
+
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		<!-- Content_right_End -->
+		<!-- Footer -->
+		<footer class="footer ptb-20">
+			<div class="row">
+				<div class="col-12 text-center">
+					<div class="copy_right">
+						<p>
+							2020 © Designed By
+							<a href="#">DELAF SYSTEMS COMPANY.</a>
+						</p>
+					</div>
+
+				</div>
+			</div>
+		</footer>
+		<!-- Footer_End -->
+	</div>
+	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/popper.min.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/owl.carousel.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+	<script type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="assets/js/custom.js" type="text/javascript"></script>
+	
+    <script src="js/jquery.min.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+
+    <script type="text/javascript" src="cordova.js"></script>
+	
+	
+	
+	<script src="js/socket.js"></script>
+	<script type="text/javascript" src="js/menujs.js"></script>
+
+
+</body>
+
+</html>

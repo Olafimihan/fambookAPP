@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kode is a Premium Bootstrap Admin Template, It's responsive, clean coded and mobile friendly">
+  <meta name="keywords" content="bootstrap, admin, dashboard, flat admin template, responsive," />
+  <title>Poultry.io</title>
+
+  <!-- ========== Css Files ========== -->
+  <link href="css/root.css" rel="stylesheet">
+
+  <!-- <link rel="stylesheet" href="js/jquery.min.js" > -->
+  
+  <script>
+      //   if (jQuery) {  
+      //   // jQuery is loaded  
+      //   alert("Yeah!");
+      // } else {
+      //   // jQuery is not loaded
+      //   alert("Doesn't Work");
+      // }
+    
+    
+
+ 
+  </script>
+  <style type="text/css">
+    body{background: #F5F5F5;}
+  </style>
+  </head>
+  <body onload="onLoad()">
+
+    <div class="login-form">
+      <form action="" method="POST">
+        <div class="top">
+          <img src="img/logo1.jpeg" alt="icon" class="icon" height="100" width="80">
+          <h1>Poultry.io</h1>
+          <h5>Poultry Daily Transaction Collector</h5>
+        </div>
+        <div class="form-area">
+          <div class="group">
+            <input type="text" class="form-control" placeholder="Username" id="Username" name="Username" >
+            <i class="fa fa-user"></i>
+          </div>
+          <div class="group">
+            <input type="password" class="form-control" placeholder="Password" id="Password" name="Password">
+            <i class="fa fa-key"></i>
+          </div>
+          <div class="checkbox checkbox-primary">
+            <input id="checkbox101" type="checkbox" checked>
+            <label for="checkbox101"> Remember Me</label>
+          </div>
+          <button type="button" onclick="login()" class="btn btn-default btn-block">LOGIN</button>
+          <!-- <button type="button" onclick="penDataPool()" class="btn btn-default btn-block">Pen Data</button> -->
+        </div>
+        <div id="TableData"></div>
+      </form>
+      <div class="footer-links row">
+        <div class="col-xs-6"><a href="register.html"><i class="fa fa-external-link"></i> Register Now</a></div>
+        <div class="col-xs-6 text-right"><a href="#"><i class="fa fa-lock"></i> Forgot password</a></div>
+      </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+  
+    <script type="text/javascript" src="cordova.js"></script>
+        
+    <script src="js/login.js"></script>
+  <script src="js/socket.js"></script>
+
+  <script type="text/javascript">
+    var arr = localStorage.getItem('data');
+    var dat = arr.split(',');
+
+    // alert(dat[0])
+    // alert(dat[1])
+    // document.getElementById('Username').value = dat[0];
+    // document.getElementById('Password').value = dat[1];
+    window.onload=()=>{
+      $('#Username').val(dat[0]);
+      $('#Password').val(dat[1]);
+
+    }
+    // $(document).ready(function(){
+
+      
+    // })
+  
+
+  </script>
+
+</body>
+</html>

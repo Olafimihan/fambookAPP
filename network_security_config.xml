@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!--    https://developer.android.com/training/articles/security-config -->
+    <domain-config cleartextTrafficPermitted="true">
+
+<!-- example where I whitelist a non HTTPS domain -->
+        <domain includeSubdomains="true">poultry.delafsolutions.online</domain>
+
+<!-- example where I whitelist a local IP -->
+        <domain includeSubdomains="true">139.162.229.38</domain>
+
+<!-- you can add as much as you want -->
+
+    </domain-config>
+</network-security-config>
