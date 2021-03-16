@@ -1,8 +1,8 @@
 *.db
-node_modules/
-keys/
-hooks/
-plugins/
+/node_modules
+/keys
+/hooks
+/plugins
 *.keystore
 *.xml
 *.jks
